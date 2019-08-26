@@ -12,18 +12,18 @@ export function createPost(title, body) {
   };
 }
 
-export function deletePost(id) {
+export function deletePost(index) {
   return {
     type: DELETE_POST,
-    payload: id
+    payload: index
   };
 }
 
-export function updatePost(id, body) {
+export function updatePost(index, body) {
   return {
     type: UPDATE_POST,
     payload: {
-      id,
+      index,
       body
     }
   };
