@@ -1,15 +1,8 @@
 import { createStore } from 'redux';
-
-const initialState = {
-  last_action: ''
-};
-
-const reducer = (state = initialState, action) => {
-  return { ...state, last_action: action.type };
-};
+import postReducer from './reducers/postReducer';
 
 const store = createStore(
-  reducer,
+  postReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
