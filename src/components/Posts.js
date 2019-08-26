@@ -5,7 +5,9 @@ import Post from './Post';
 
 function Posts({ posts }) {
   const postItems = posts.map(post => (
-    <Post key={`${post.title} ${post.body}`} title={post.title} body={post.body} />
+    <li key={`${post.title} ${post.body}`}>
+      <Post title={post.title} body={post.body} />
+    </li>
   ));
 
   return (
