@@ -1,6 +1,6 @@
 import React from 'react';
+import AllPosts from '../containers/AllPosts';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <AllPosts />;
 }
-  

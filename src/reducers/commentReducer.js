@@ -2,7 +2,7 @@ import { ADD_COMMENT, DELETE_COMMENT } from '../actions/commentActions';
 import { DELETE_POST } from '../actions/postActions';
 
 const initialState = {
-  0: ['Comment', 'Comment2']
+  0: ['Comment', 'Comment2'],
 };
 
 export default (state = initialState, action) => {
