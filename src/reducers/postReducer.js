@@ -7,13 +7,13 @@ export default (state = initialState, action) => {
     case ADD_POST:
       return [...state, action.payload];
     case DELETE_POST:
-      return [state.posts.filter((_, index) => index !== action.payload)];
+      return state.filter((_, index) => index !== action.payload);
     case UPDATE_POST:
-      return [state.posts.map((post, index) => {
+      return state.map((post, index) => {
         return index === action.payload.index ? 
           { title: post.title, body: action.payload.body } :
           post;
-      })];
+      });
     default:
       return state;
   }
