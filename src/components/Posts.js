@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import Post from './Post';
 
 function Posts({ posts }) {
-  const postItems = posts.map(post => (
-    <li key={`${post.title} ${post.body}`}>
+  const postItems = posts.map((post, i) => (
+    <li key={i}>
       <Post title={post.title} body={post.body} />
     </li>
   ));
