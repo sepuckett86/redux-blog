@@ -1,7 +1,7 @@
 import React from 'react';
 import AllPosts from '../containers/AllPosts';
 import CreatePost from '../containers/CreatePost';
-import PostDetailContainer from '../components/PostDetailContainer';
+// import PostDetailContainer from '../components/PostDetailContainer';
 import { 
   BrowserRouter as Router, 
   Route 
@@ -12,7 +12,7 @@ export default function App() {
     <Router>
       <Route exact path="/" component={AllPosts}/>
       <Route path="/create" component={CreatePost}/>
-      <Route path="/post/:index" component={PostDetailContainer}/>
+      {/* <Route path="/post/:index" component={PostDetailContainer}/> */}
     </Router>
   );
 }

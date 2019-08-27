@@ -13,7 +13,7 @@ export default class PostDetailContainer extends Component {
   render() {
     const index = this.props.match.params.index;
     return (
-      <PostDetail />
+      <PostDetail index={index}/>
     );
   }
 }
