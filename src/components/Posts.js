@@ -6,7 +6,7 @@ import Post from './Post';
 function Posts({ posts }) {
   const postItems = posts.map((post, i) => (
     <li key={i}>
-      <Post title={post.title} body={post.body} />
+      <Post title={post.title} body={post.body} index={i} />
     </li>
   ));
 

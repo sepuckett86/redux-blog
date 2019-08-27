@@ -1,26 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
 import { connect } from 'react-redux';
 import PostDetail from '../components/PostDetail';
 import { getPost } from '../selectors/postSelectors';
+import { getComments } from '../selectors/commentSelectors';
 
-export default class PostDetailContainer extends Component {
-  static propTypes = {
-    match: PropTypes.object.isRequired
-  }
-
-  render() {
-    const index = this.props.match.params.index;
-    return (
-      <PostDetail index={index}/>
-    );
-  }
-}
-
-const mapStatetoProps = (state, index) => ({
-  post: getPost(state, index)
+const mapStatetoProps = (state, props) => ({
+  post: getPost(state, props.match.params.index),
+  comments: getComments(state, props.match.params.index)
 });
 
-connect(mapStatetoProps)(PostDetailContainer);
-
+export default connect(mapStatetoProps)(PostDetail);

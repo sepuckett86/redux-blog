@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function PostDetail({ title, body, comments }) {
+function PostDetail({ post, comments }) {
+  const { title, body } = post;
   const commentItems = comments.map((comment, i) => (
     <li key={i}>
       {comment}
@@ -22,6 +23,7 @@ function PostDetail({ title, body, comments }) {
 }
 
 PostDetail.propTypes = {
+  post: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   comments: PropTypes.arrayOf(PropTypes.string).isRequired
